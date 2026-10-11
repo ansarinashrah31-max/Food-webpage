@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza - Food Corner</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+  body{background:#FFF8F0;}
+  .header{padding:15px; background:white; text-align:center; box-shadow:0 2px 10px #eee; position:sticky; top:0; z-index:10;}
+  .header h1{color:#FF5200;}
+  .header a{color:#FF5200; text-decoration:none; font-weight:bold; float:left; margin-top:5px;}
+  .title{text-align:center; padding:25px 10px;}
+  .title h2{font-size:32px;}
+  .burger-container{max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; padding:20px;}
+  .card{background:white; border-radius:18px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+  .card img{width:100%; height:200px; object-fit:cover; object-position:center; display:block;}
+  .card-body{padding:15px; text-align:center;}
+  .card-body h3{font-size:19px; margin-bottom:5px;}
+  .price{font-size:18px; color:#FF5200; font-weight:bold; margin:8px 0;}
+  .order-btn{display:block; width:100%; padding:12px; background: linear-gradient(90deg, #FF8A00, #FF5200); color:white; border:none; border-radius:10px; font-weight:bold; font-size:16px; cursor:pointer; margin-top:10px;}
+  @media(max-width:900px){.burger-container{grid-template-columns: repeat(2, 1fr);}}
+  @media(max-width:600px){.burger-container{grid-template-columns: 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">← Back</a>
+  <h1>🍕 Food Corner</h1>
+</div>
+
+<div class="title">
+  <h2>Our Special Pizza</h2>
+  <br>
+  <p>Choose your favourite flavour - Fresh & Cheesy</p>
+</div>
+
+<div class="burger-container">
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Margherita</h3><p class="price">Rs. 800</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/803290/pexels-photo-803290.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Veggie</h3><p class="price">Rs. 950</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>BBQ</h3><p class="price">Rs. 900</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Peproni</h3><p class="price">Rs. 1000</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Supreme</h3><p class="price">Rs. 1050</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80">
+    <div class="card-body"><h3>Buffalo Chicken</h3><p class="price">Rs. 980</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Four cheese</h3><p class="price">Rs. 850</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Pesto</h3><p class="price">Rs. 920</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/367915/pexels-photo-367915.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>White Pizza</h3><p class="price">Rs. 1100</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <div class="card-body"><h3>Mediterranean</h3><p class="price">Rs. 950</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+</div>
+</body>
+</html>
