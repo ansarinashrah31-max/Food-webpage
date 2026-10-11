@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #fff8f0; color: #333; }
+        
+        .btn { display: inline-block; background: linear-gradient(90deg, #FF8A00, #FF5200); color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #cc3d00; transform: scale(1.05); }
+        .section { padding: 60px 8%; }
+        .section-title { text-align: center; font-size: 32px; color: #222; }
+        .subtitle { text-align: center; color: #777; margin-bottom: 40px; }
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { font-size: 32px; }
+        .logo h2 { color: #ff4d00; }
+        nav { display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: #333; font-weight: 600; }
+        nav a:hover { color: #ff4d00; }
+
+        .hero { height: 90vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(255,87,34,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200'); background-size: cover; background-position: center; display: flex; align-items: center; padding-left: 8%; }
+        .hero-content { color: #fff; }
+        .hero-content .offer { background: #ff4d00; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; letter-spacing: 1px; }
+        .hero-content h1 { font-size: 55px; line-height: 1.2; margin: 15px 0; }
+        .hero-content p { font-size: 18px; margin-bottom: 20px; }
+
+        .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .food-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding-bottom: 20px; transition: 0.3s; }
+        .food-card:hover { transform: translateY(-10px); }
+        .food-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background-color: #fff;
+        }
+        .food-card h3 { margin: 15px 0 10px;
+                        font-size: 22px;
+                        text-align: center;
+                        color:#333;}
+      .details-link {
+  color: #ff4d00;
+  font-weight: 600;
+  margin-top: 8px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+        .about { display: flex; align-items: center; gap: 50px; background: #fff; }
+        .about-text { flex: 1; }
+        .about-text h2 { font-size: 36px; margin-bottom: 20px; }
+        .about-text p { line-height: 1.8; color: #555; margin-bottom: 20px; }
+      .about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto auto;
+  gap: 12px;
+  flex: 1;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid black; 
+  display: block;
+}
+.box1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;    
+  height: 300px;
+}
+.box2 {
+  grid-column: 2 / 3; 
+  grid-row: 1 / 2;    
+  height: 180px;}
+.box3 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  height: 180px;
+}
+.box4 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;    
+  height: 300px;
+    }
+      .booking { background: #fff8f0; }
+        .booking-form { max-width: 600px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .booking-form input, .booking-form select { padding: 12px; border: 1px solid #ddd; border-radius: 8px; width: 100%; outline: none; }
+        .booking-form input:focus, .booking-form select:focus { border-color: #ff4d00; }
+        .booking-form button { grid-column: span 2; }
+
+       footer { background: #222; color: #fff; text-align: center; padding: 40px 8%; }
+        footer h2 { color: #ff4d00; margin-bottom: 10px; }
+        footer p { color: #ccc; margin: 5px 0; }
+        .copyright { margin-top: 20px; font-size: 14px; color: #777; }
+@media (max-width: 768px) {
+            .menu-grid { grid-template-columns: repeat(2, 1fr); }
+            .about { flex-direction: column; }
+            .about-images { width: 100%; order: 2; }
+            .about-text { order: 1; text-align: center; }
+            .hero-content h1 { font-size: 40px; }
+            header { flex-direction: column; gap: 10px; }
+        }
+  @media (max-width: 480px) {
+            .section { padding: 40px 5%; }
+            header { padding: 15px 5%; }
+            nav { gap: 12px; flex-wrap: wrap; justify-content: center; }
+            nav a { font-size: 14px; }
+            .hero { height: 70vh; padding-left: 5%; justify-content: center; text-align: center; }
+            .hero-content h1 { font-size: 32px; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .about-images { grid-template-columns: 1fr; }
+            .about-images img:nth-child(2), .about-images img:nth-child(4) { transform: translateY(0); }
+            .booking-form { grid-template-columns: 1fr; }
+            .booking-form button { grid-column: span 1; }
+@media (max-width: 768px) {
+  
+  .about {
+    flex-direction: column;
+  }
+
+  .about-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+  }
+.box1, .box2, .box3, .box4 {
+    grid-column: auto;
+    grid-row: auto;
+    height: 200px; 
+  }
+  }
+        }
+@keyframes offer-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0px #ff4d00; }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px #ff4d00, 0 0 40px #ffae00; }
+  100% { transform: scale(1); box-shadow: 0 0 0px #ff4d00; }
+}
+
+.hero-content .offer {
+  animation: offer-pulse 1.8s infinite ease-in-out;
+  display: inline-block; 
+}
+
+.hero-content .btn {
+  transition: all 0.4s ease; 
+  box-shadow: 0 5px 15px rgba(255, 77, 0, 0.4);
+}
+
+.hero-content .btn:hover {
+  transform: scale(1.15) translateY(-5px);
+  background: #fff;
+  color: #ff4d00;
+  box-shadow: 0 10px 25px rgba(255, 77, 0, 0.6);
+  }
+    </style>
+</head>
+<body>
+  <header>
+        <div class="logo">
+            <span class="logo-icon">🍔</span>
+            <h2>Fast Food Corner</h2>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#book">Book Table</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+ <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="offer">SPECIAL OFFER</p>
+            <h1>Delicious Food<br>50% OFF</h1>
+            <p>Fresh, tasty and made with love!</p>
+            <a href="#menu" class="btn">Order Now</a>
+        </div>
+    </section>
+ <section class="menu section" id="menu">
+        <h2 class="section-title">Our Delicious Menu</h2>
+        <p class="subtitle">Choose your favorite food</p>
+        <div class="menu-grid">
+          <div class="food-card">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Burger">
+    <h3>Burger</h3>
+    <a href="Burger-details.html" class="details-link">See Details →</a>
+          </div>
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="Pizza">
+                <h3>Pizza</h3>
+                <a href="Pizza-details.html" class="details-link">see Details →</a>
+            </div>
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600" alt="Pasta">
+                <h3>Pasta</h3>
+                <a href="Pasta-details.html" class="details-link">see Details →</a>
+            </div>
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?w=600" alt="Spaghetti">
+                <h3>Spaghetti</h3>
+                <a href="Spaghetti-details.html" class="details-link">see Details →</a>
+            </div>
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600" alt="Shawarma">
+                <h3>Shawarma</h3>
+                <a href="Shawarma-details.html" class="details-link">see Details →</a>
+            </div>
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w" alt="Softdrinks">
+                <h3>Soft Drinks</h3>
+                <a href="Drink-details.html" class="details-link">see Details →</a>
+            </div>
+        </div>
+    </section>
+ <section class="about section" id="about">
+        <div class="about-images">
+            <div class="box box1"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600" alt="Fresh burger"></div>
+            <div class="box box2"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="Pizza"></div>
+            <div class="box box3"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600" alt="Pasta"></div>
+            <div class="box box4"><img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600" alt="Shawarma"></div>
+        </div>
+        <div class="about-text">
+            <h2>About Our Restaurant</h2>
+            <p>
+                Welcome to Food Corner, your favorite place for delicious
+                fast food! We believe that good food brings people together.
+                Our menu includes juicy burgers, cheesy pizzas, creamy pasta,
+                tasty spaghetti, fresh shawarma and refreshing cold drinks.
+                We prepare our food with care and use quality ingredients
+                to give you a wonderful dining experience. Visit us with
+                your family and friends and enjoy every bite!
+            </p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+  <section class="booking section" id="book">
+        <h2 class="section-title">Book Your Table</h2>
+        <p class="subtitle">Reserve a table for your next meal</p>
+        <form class="booking-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <select name="person" required>
+                <option value="">Select Number of Persons</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Persons</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons</option>
+                <option value="5">5 Persons</option>
+                <option value="6">6 Persons</option>
+            </select>
+            <label>Select Date and Time</label>
+<input type="datetime-local">
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </section>
+  <footer id="contact">
+        <h2>Food Corner</h2>
+        <p>Delicious food, happy moments!</p>
+        <p>Email: info@foodcorner.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p class="copyright">&copy; 2026 Food Corner. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
