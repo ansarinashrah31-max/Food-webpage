@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pastas - Food Corner</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+  body{background:#FFF8F0;}
+  .header{padding:15px; background:white; text-align:center; box-shadow:0 2px 10px #eee; position:sticky; top:0; z-index:10;}
+  .header h1{color:#FF5200;}
+  .header a{color:#FF5200; text-decoration:none; font-weight:bold; float:left; margin-top:5px;}
+  .title{text-align:center; padding:25px 10px;}
+  .title h2{font-size:32px;}
+  .Pasta-container{max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; padding:20px;}
+  .card{background:white; border-radius:18px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+  .card img{width:100%; height:230px; object-fit:cover; display:block;}
+  .card-body{padding:15px; text-align:center;}
+  .card-body h3{font-size:19px; margin-bottom:5px;}
+  .price{font-size:18px; color:#FF5200; font-weight:bold; margin:8px 0;}
+  .order-btn{display:block; width:100%; padding:12px; background: linear-gradient(90deg, #FF8A00, #FF5200); color:white; border:none; border-radius:10px; font-weight:bold; font-size:16px; cursor:pointer; margin-top:10px;}
+  @media(max-width:900px){.Pasta-container{grid-template-columns: repeat(2, 1fr);}}
+  @media(max-width:600px){.Pasta-container{grid-template-columns: 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">← Back</a>
+  <h1>🍝 Food Corner</h1>
+</div>
+
+<div class="title">
+  <h2>Our Special Pastas</h2>
+  <br>
+  <p>Choose your favourite flavour - Fresh & Creamy</p>
+</div>
+
+<div class="Pasta-container">
+
+  <div class="card">
+    <img src="https://unsplash.com/photos/s0duM7x1yuA/download?force=true&w=600" alt="Alfredo Pasta">
+    <div class="card-body"><h3>Alfredo Pasta</h3><p class="price">Rs. 650</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Arrabbiata Pasta">
+    <div class="card-body"><h3>Arrabbiata Pasta</h3><p class="price">Rs. 600</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=600" alt="White Sauce Pasta">
+    <div class="card-body"><h3>White Sauce Pasta</h3><p class="price">Rs. 620</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/30350295/pexels-photo-30350295/free-photo-of-close-up-of-mafaldine-pasta-in-tomato-sauce.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Aglio E Olio">
+    <div class="card-body"><h3>Aglio E Olio</h3><p class="price">Rs. 580</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/10000002/pexels-photo-10000002.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mushroom Pasta">
+    <div class="card-body"><h3>Mushroom Pasta</h3><p class="price">Rs. 700</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/6874263/pexels-photo-6874263.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Creamy Pasta">
+    <div class="card-body"><h3>Creamy Pasta</h3><p class="price">Rs. 670</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/28459093/pexels-photo-28459093/free-photo-of-delicious-indian-masala-pasta-in-black-bowl.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chicken Pasta">
+    <div class="card-body"><h3>Chicken Pasta</h3><p class="price">Rs. 350</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+</div>
+</body>
+</html>
