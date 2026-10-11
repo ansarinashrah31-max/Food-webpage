@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burgers - Food Corner</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+  body{background:#FFF8F0;}
+  .header{padding:15px; background:white; text-align:center; box-shadow:0 2px 10px #eee; position:sticky; top:0; z-index:10;}
+  .header h1{color:#FF5200;}
+  .header a{color:#FF5200; text-decoration:none; font-weight:bold; float:left; margin-top:5px;}
+  .title{text-align:center; padding:25px 10px;}
+  .title h2{font-size:32px;}
+  .burger-container{max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; padding:20px;}
+  .card{background:white; border-radius:18px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+  .card img{width:100%; height:230px; object-fit:cover; display:block;}
+  .card-body{padding:15px; text-align:center;}
+  .card-body h3{font-size:19px; margin-bottom:5px;}
+  .price{font-size:18px; color:#FF5200; font-weight:bold; margin:8px 0;}
+  .order-btn{display:block; width:100%; padding:12px; background: linear-gradient(90deg, #FF8A00, #FF5200); color:white; border:none; border-radius:10px; font-weight:bold; font-size:16px; cursor:pointer; margin-top:10px;}
+  @media(max-width:900px){.burger-container{grid-template-columns: repeat(2, 1fr);}}
+  @media(max-width:600px){.burger-container{grid-template-columns: 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">← Back</a>
+  <h1>🍔 Food Corner</h1>
+</div>
+
+<div class="title">
+  <h2>Our Special Burgers</h2>
+  <br>
+  <p>Choose your favourite flavour - Fresh & Juicy</p>
+</div>
+
+<div class="burger-container">
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&w=600" alt="grill">
+    <div class="card-body"><h3>Grill Burger</h3><p class="price">Rs. 500</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/2702674/pexels-photo-2702674.jpeg?auto=compress&w=600" alt="beef">
+    <div class="card-body"><h3>Beef Burger</h3><p class="price">Rs. 550</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&w=600" alt="Double patty">
+    <div class="card-body"><h3>Double patty Burger</h3><p class="price">Rs. 650</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1633572/pexels-photo-1633572.jpeg?auto=compress&w=600" alt="Mighty">
+    <div class="card-body"><h3>Mighty Zinger Burger</h3><p class="price">Rs. 450</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/3219547/pexels-photo-3219547.jpeg?auto=compress&w=600" alt="BBQ">
+    <div class="card-body"><h3>BBQ Burger</h3><p class="price">Rs. 530</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/3616956/pexels-photo-3616956.jpeg?auto=compress&w=600" alt="creamy">
+    <div class="card-body"><h3>Creamy Burger</h3><p class="price">Rs. 400</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/3607284/pexels-photo-3607284.jpeg?auto=compress&w=600" alt="Crispy Chicken">
+    <div class="card-body"><h3>Crispy Chicken Burger</h3><p class="price">Rs. 350</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600" alt="Cheese">
+    <div class="card-body"><h3>Cheese Burger</h3><p class="price">Rs. 480</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600" alt="Loaded">
+    <div class="card-body"><h3>Special Loaded Burger</h3><p class="price">Rs. 600</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600" alt="Zinger">
+    <div class="card-body"><h3>Zinger Burger</h3><p class="price">Rs. 300</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+</div>
+</body>
+</html>
