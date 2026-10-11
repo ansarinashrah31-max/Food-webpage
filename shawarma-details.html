@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shawarma - Food Corner</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+  body{background:#FFF8F0;}
+  .header{padding:15px; background:white; text-align:center; box-shadow:0 2px 10px #eee; position:sticky; top:0; z-index:10;}
+  .header h1{color:#FF5200;}
+  .header a{color:#FF5200; text-decoration:none; font-weight:bold; float:left; margin-top:5px;}
+  .title{text-align:center; padding:25px 10px;}
+  .title h2{font-size:32px;}
+  .Shawarma-container{max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; padding:20px;}
+  .card{background:white; border-radius:18px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+  .card img{width:100%; height:230px; object-fit:cover; display:block;}
+  .card-body{padding:15px; text-align:center;}
+  .card-body h3{font-size:19px; margin-bottom:5px;}
+  .price{font-size:18px; color:#FF5200; font-weight:bold; margin:8px 0;}
+  .order-btn{display:block; width:100%; padding:12px; background: linear-gradient(90deg, #FF8A00, #FF5200); color:white; border:none; border-radius:10px; font-weight:bold; font-size:16px; cursor:pointer; margin-top:10px;}
+  @media(max-width:900px){.Shawarma-container{grid-template-columns: repeat(2, 1fr);}}
+  @media(max-width:600px){.Shawarma-container{grid-template-columns: 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">← Back</a>
+  <h1>🌯 Food Corner</h1>
+</div>
+
+<div class="title">
+  <h2>Our Special Shawarma</h2>
+  <br>
+  <p>Choose your favourite flavour - Fresh & Juicy</p>
+</div>
+
+<div class="Shawarma-container">
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/5779423/pexels-photo-5779423.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chicken Shawarma">
+    <div class="card-body"><h3>Chicken Shawarma</h3><p class="price">Rs. 350</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/5779364/pexels-photo-5779364.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Beef Shawarma">
+    <div class="card-body"><h3>Beef Shawarma</h3><p class="price">Rs. 450</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/18177332/pexels-photo-18177332/free-photo-of-close-up-of-shawarma.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spicy Shawarma">
+    <div class="card-body"><h3>Spicy Shawarma</h3><p class="price">Rs. 380</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/9980749/pexels-photo-9980749.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garlic Shawarma">
+    <div class="card-body"><h3>Garlic Shawarma</h3><p class="price">Rs. 400</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/8018079/pexels-photo-8018079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mediterranean Shawarma">
+    <div class="card-body"><h3>Mediterranean Shawarma</h3><p class="price">Rs. 480</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/16022887/pexels-photo-16022887/free-photo-of-doner-on-plate.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Veggie Shawarma">
+    <div class="card-body"><h3>Veggie Shawarma</h3><p class="price">Rs. 300</p><button class="order-btn">Order Now</button></div>
+  </div>
+
+</div>
+</body>
+</html>
